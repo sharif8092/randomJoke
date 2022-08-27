@@ -5,12 +5,17 @@ function UserCard(props){
    }
    // console.log(props.userData.name); for debug
 
+   //obeject DEstructuring
+   let {name,avatar_url, followers, public_repos} = props.userData; //this is for take-out userData from props now you dont have to write props;
+   
+   
+   
    return(
     <div id="user-info">
-      <h2>{props.userData.name}</h2>
-     <img src={props.userData.avatar_url} alt="img" id="pic"/> 
-     <h2>{props.userData.followers}</h2>
-     <h2>{props.userData.public_repos}</h2>
+      <h2>{name}</h2>
+     <img src={avatar_url} alt="img" id="pic"/> 
+     <h2>{followers}</h2>
+     <h2>{public_repos}</h2>
 
     </div>
    );
